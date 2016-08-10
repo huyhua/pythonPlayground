@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160810 23:37:28.283" generator="Robot 3.0 (Python 2.7.12 on win32)">
+<suite source="E:\Works\PythonPlayground\tests\PlayFile.robot" id="s1" name="PlayFile">
+<kw type="setup" name="Set Environment Variable" library="OperatingSystem">
+<doc>Sets an environment variable to a specified value.</doc>
+<arguments>
+<arg>webdriver.chrome.driver</arg>
+<arg>${SUITE_SOURCE}\chromdriver.exe</arg>
+</arguments>
+<msg timestamp="20160810 23:37:28.408" level="INFO">Environment variable 'webdriver.chrome.driver' set to value 'E:\Works\PythonPlayground\tests\PlayFile.robotchromdriver.exe'.</msg>
+<status status="PASS" endtime="20160810 23:37:28.408" starttime="20160810 23:37:28.408"></status>
+</kw>
+<test id="s1-t1" name="Test title">
+<kw name="Given open browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=gc</arg>
+</arguments>
+<msg timestamp="20160810 23:37:28.408" level="INFO">Opening browser 'gc' to base url 'http://www.immoscout24.ch/en'</msg>
+<status status="PASS" endtime="20160810 23:37:43.398" starttime="20160810 23:37:28.408"></status>
+</kw>
+<kw name="And maximize browser window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20160810 23:37:44.593" starttime="20160810 23:37:43.399"></status>
+</kw>
+<kw name="And wait until page contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Rent and buy real estate</arg>
+</arguments>
+<status status="PASS" endtime="20160810 23:37:44.625" starttime="20160810 23:37:44.593"></status>
+</kw>
+<kw name="Then click element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>lnkLoginRegister</arg>
+</arguments>
+<msg timestamp="20160810 23:37:44.625" level="INFO">Clicking element 'lnkLoginRegister'.</msg>
+<status status="PASS" endtime="20160810 23:37:54.045" starttime="20160810 23:37:44.625"></status>
+</kw>
+<kw name="Then page should contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Log in / Register</arg>
+</arguments>
+<msg timestamp="20160810 23:37:54.083" level="INFO">Current page contains text 'Log in / Register'.</msg>
+<status status="PASS" endtime="20160810 23:37:54.083" starttime="20160810 23:37:54.046"></status>
+</kw>
+<tags>
+<tag>DEBUG</tag>
+</tags>
+<status status="PASS" endtime="20160810 23:37:54.083" critical="yes" starttime="20160810 23:37:28.408"></status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20160810 23:37:57.255" starttime="20160810 23:37:54.085"></status>
+</kw>
+<doc>Example test for Selenium</doc>
+<status status="PASS" endtime="20160810 23:37:57.255" starttime="20160810 23:37:28.286"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">DEBUG</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="PlayFile" pass="1">PlayFile</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
